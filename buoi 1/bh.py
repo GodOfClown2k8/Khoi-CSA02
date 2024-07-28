@@ -3,7 +3,7 @@ class Character:
 	def __init__(self, hair_color, age):
 		self.hair_color = hair_color
 		self.age = age
-		self.genger = "Male"
+		self.gender = "Male"
 
 	# Phương thức (methods)
 	def punch(self):
