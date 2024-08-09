@@ -6,3 +6,9 @@ ERROR:root:An error occurred: Target.update() takes 1 positional argument but 2 
 ERROR:root:An error occurred: Target.update() takes 1 positional argument but 2 were given
 ERROR:root:An error occurred: Target.update() takes 1 positional argument but 2 were given
 ERROR:root:An error occurred: Target.update() takes 1 positional argument but 2 were given
+ERROR:root:An error occurred: 'ObjectPool' object has no attribute 'return_asteroid'
+ERROR:root:An error occurred: 'ObjectPool' object has no attribute 'return_target'
+ERROR:root:An error occurred: 'ObjectPool' object has no attribute 'return_target'
+ERROR:root:An error occurred: 'ObjectPool' object has no attribute 'return_asteroid'
+ERROR:root:An error occurred: 'ObjectPool' object has no attribute 'return_target'
+ERROR:root:An error occurred: name 'check_collisions' is not defined
