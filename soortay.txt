@@ -1,0 +1,43 @@
+#Giải thích tham số của plt.subplots_adjust()
+left: Khoảng cách từ lề trái (0 đến 1).
+right: Khoảng cách từ lề phải (0 đến 1).
+top: Khoảng cách từ lề trên (0 đến 1).
+bottom: Khoảng cách từ lề dưới (0 đến 1).
+Tính mật độ dân số:
+
+#df['PopulationDensity'] = (df['Population'] / df['Area']).round(): Tính mật độ dân số và làm tròn.
+Vẽ biểu đồ tần suất:
+
+#plt.figure(figsize=[10, 10]): Thiết lập kích thước của biểu đồ.
+
+#plt.xticks(...): Thiết lập các nhãn cho trục x. Bạn có thể điều chỉnh khoảng cách nếu cần.
+
+#plt.hist(...): Vẽ biểu đồ tần suất.
+
+#plt.title(...), plt.xlabel(...), và plt.ylabel(...): Đặt tiêu đề và nhãn cho các trục.
+
+#plt.tight_layout(): Tự động điều chỉnh khoảng cách giữa các thành phần của biểu đồ để không bị chồng chéo.
+
+#plt.axvline(...): Vẽ một đường thẳng dọc ở vị trí x = 4500, với màu đỏ và kiểu gạch ngang.
+
+#label='Mật độ cao nhất (4500 người/km²)': Nhãn cho đường chỉ thị.
+
+#plt.legend(): Hiển thị chú thích để người xem biết đường chỉ thị thể hiện điều gì.
+
+#df['PopulationDensity'].max():
+
+Đây là cách để tìm giá trị lớn nhất trong cột PopulationDensity của DataFrame df. Nó trả về giá trị mật độ dân số cao nhất trong dữ liệu.
+int(...):
+
+Hàm int() được sử dụng để đảm bảo rằng giá trị trả về là kiểu số nguyên. Điều này hữu ích vì các tham số trong np.arange() cần kiểu số nguyên.
+int(df['PopulationDensity'].max()) + 1000:
+
+Đây là giá trị tối đa cho mảng được tạo ra. Thêm 1000 vào giá trị lớn nhất đảm bảo rằng khoảng giá trị cho trục x đủ lớn để bao gồm các giá trị mật độ dân số.
+np.arange(0, ..., 500):
+
+Hàm np.arange(start, stop, step) tạo ra một mảng các số bắt đầu từ start (0 trong trường hợp này), đến stop (giá trị tối đa đã tính) với bước nhảy step (500).
+Kết quả là mảng này sẽ chứa các giá trị từ 0 đến giá trị lớn nhất của mật độ dân số (cộng thêm 1000), với khoảng cách giữa các giá trị là 500.
+Ví dụ
+Giả sử giá trị lớn nhất của PopulationDensity là 4500. Khi đó:
+
+int(df['PopulationDensity'].max()) + 1000 sẽ là 5500.
