@@ -41,3 +41,14 @@ Ví dụ
 Giả sử giá trị lớn nhất của PopulationDensity là 4500. Khi đó:
 
 int(df['PopulationDensity'].max()) + 1000 sẽ là 5500.
+
+#plt.plot(years, events, marker='o', color='orange'): Vẽ biểu đồ đường thẳng với trục x là các năm (years) và trục y là số lượng lốc xoáy (events). Các điểm dữ liệu được đánh dấu bằng hình tròn (marker 'o') và đường kẻ có màu cam.
+plt.title: Đặt tiêu đề cho biểu đồ.
+plt.xlabel: Đặt nhãn cho trục x (năm).
+plt.ylabel: Đặt nhãn cho trục y (số lượng sự kiện lốc xoáy).
+plt.grid(True): Hiển thị lưới trên biểu đồ để dễ đọc các giá trị.
+plt.show(): Hiển thị biểu đồ.
+df[1:1] # lay tu [1;1)
+df[1:2] # lay tu [1;2)
+df[1:] #lay het 
+df[df['Region'] != 'Đông Bắc Bộ'] # df[~(df['Region'] == 'Đông Bắc Bộ')]
