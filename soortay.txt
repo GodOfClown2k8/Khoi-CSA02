@@ -53,3 +53,32 @@ df[1:2] # lay tu [1;2)
 df[1:] #lay het 
 df[df['Region'] != 'Đông Bắc Bộ'] # df[~(df['Region'] == 'Đông Bắc Bộ')]
 Được sử dụng injury_counts.index cho nhãn trục x và injury_counts.values chiều cao thanh.
+Giải thích các thay đổi:
+
+Chúng ta sử dụng data['news'].str.contains('injury', case=False, na=False) để lọc chỉ các hàng có chứa từ "injury" trong cột 'news'. Tham số case=False cho phép tìm kiếm không phân biệt chữ hoa chữ thường, và na=False để bỏ qua các giá trị NaN.
+
+Chúng ta tạo một DataFrame mới injury_data chỉ chứa các hàng có liên quan đến chấn thương.
+
+Sau đó, chúng ta đếm số lượng cho mỗi loại chấn thương trong injury_data.
+
+Phần còn lại của code vẫn giữ nguyên để tạo và hiển thị biểu đồ.
+
+for bar in bars:: Lặp qua từng thanh (bar) trong biểu đồ. Mỗi bar là một đối tượng đại diện cho một cột trong biểu đồ.
+
+height = bar.get_height(): Lấy chiều cao của thanh hiện tại. Đây chính là giá trị số lượng mà thanh đó đại diện.
+
+plt.text(...): Hàm này được sử dụng để thêm văn bản vào biểu đồ. Các tham số của nó là:
+
+bar.get_x() + bar.get_width()/2.: Đây là vị trí x của văn bản.
+
+bar.get_x() lấy vị trí x của cạnh trái của thanh.
+bar.get_width()/2. là một nửa chiều rộng của thanh.
+Cộng hai giá trị này cho ta vị trí chính giữa của thanh theo chiều ngang.
+height: Đây là vị trí y của văn bản, được đặt ở đỉnh của thanh.
+
+f'{height}': Đây là nội dung văn bản, là giá trị chiều cao của thanh được chuyển thành chuỗi.
+
+ha='center': Căn giữa văn bản theo chiều ngang (horizontal alignment).
+
+va='bottom': Căn dưới văn bản theo chiều dọc (vertical alignment), đặt văn bản ngay trên đỉnh của thanh.
+.apply() được sử dụng để áp dụng hàm extract_main_injury lên mỗi phần tử của cột 'news' trong DataFrame, tạo ra một cột mới 'main_injury' chứa kết quả của việc xử lý này.
