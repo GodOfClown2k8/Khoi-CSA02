@@ -52,3 +52,4 @@ df[1:1] # lay tu [1;1)
 df[1:2] # lay tu [1;2)
 df[1:] #lay het 
 df[df['Region'] != 'Đông Bắc Bộ'] # df[~(df['Region'] == 'Đông Bắc Bộ')]
+Được sử dụng injury_counts.index cho nhãn trục x và injury_counts.values chiều cao thanh.
