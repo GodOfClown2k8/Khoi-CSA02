@@ -82,3 +82,8 @@ ha='center': Căn giữa văn bản theo chiều ngang (horizontal alignment).
 
 va='bottom': Căn dưới văn bản theo chiều dọc (vertical alignment), đặt văn bản ngay trên đỉnh của thanh.
 .apply() được sử dụng để áp dụng hàm extract_main_injury lên mỗi phần tử của cột 'news' trong DataFrame, tạo ra một cột mới 'main_injury' chứa kết quả của việc xử lý này.
+plt.text(x, y, s, **kwargs)
+x : Tọa độ x của văn bản.
+y : Tọa độ y của văn bản.
+s : Chuỗi văn bản sẽ được hiển thị.
+kwargs : Đối số từ khóa bổ sung để tùy chỉnh văn bản (ví dụ: kích thước phông chữ, màu sắc, căn chỉnh).
